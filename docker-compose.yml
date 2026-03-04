@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres-rotatracker:
+    image: postgres:16
+    container_name: db-rotatracker
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456 # Lembre-se de colocar a mesma senha do application.properties
+      POSTGRES_DB: rotatracker
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata-rotatracker:/var/lib/postgresql/data
+
+volumes:
+  pgdata-rotatracker:
