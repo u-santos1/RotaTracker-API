@@ -1,5 +1,6 @@
 package RotaTrackerAPI.RotaTrackerAPI.controller;
 
+import RotaTrackerAPI.RotaTrackerAPI.dtos.responses.DriverTotalDistanceResponseDTO;
 import RotaTrackerAPI.RotaTrackerAPI.enums.RouteStatus;
 import RotaTrackerAPI.RotaTrackerAPI.dtos.requests.RouteRequestDTO;
 import RotaTrackerAPI.RotaTrackerAPI.dtos.responses.RouteResponseDTO;
@@ -58,4 +59,6 @@ public class RouteController {
         Double totalDistance = routeService.getTotalDistanceByDriver(driverId);
         return ResponseEntity.ok(totalDistance);
     }
+
+
 }
